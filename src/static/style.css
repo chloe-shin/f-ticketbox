@@ -1,0 +1,19 @@
+
+
+.form-signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 400px;
+    padding: 10px;
+    margin: auto;
+}
+
+.event {
+  background-color: #90BA3E !important;
+}
+
+.sign-up-done { 
+  background-color: #90BA3E !important;
+}

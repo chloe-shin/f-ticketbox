@@ -1,0 +1,42 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <img src="https://static.ticketbox.vn/images-v2/TKB-FBthumb.jpg" width="35" height="35" class="d-inline-block align-top mr-5" alt="">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        
+          <form class="form-inline my-2 my-lg-0 ">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          </form>
+
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Select your location <span class="sr-only">(current)</span></a>
+            </li>
+           
+          
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+           <ul class="navbar-nav mt-2 mt-lg-0">
+             {% if current_user.is_authenticated %}
+             <li class="nav-item active">
+                <a class="nav-link" href={{url_for('root.logout')}}>Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href={{url_for('root.login')}}>Login</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href={{url_for('root.register')}}>Sign Up </a>
+              </li>
+              {% endif %}
+              <button class="btn btn-primary btn-sm event"> + Create event</button>
+           </ul>         
+          </form>
+
+        </div>
+      </nav>
